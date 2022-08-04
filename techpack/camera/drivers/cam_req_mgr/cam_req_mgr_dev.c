@@ -11,7 +11,7 @@
 #include <linux/types.h>
 #include <linux/rwsem.h>
 
-#include <mm/slab.h>
+#include <../mm/slab.h>
 
 #include <media/v4l2-fh.h>
 #include <media/v4l2-device.h>
