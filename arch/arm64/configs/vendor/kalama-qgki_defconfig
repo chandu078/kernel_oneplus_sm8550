@@ -2,6 +2,7 @@
 # Automatically generated file; DO NOT EDIT.
 # Linux/arm64 5.15.41 Kernel Configuration
 #
+CONFIG_ARCH_KALAMA=y
 CONFIG_OPLUS_SYSTEM_KERNEL_QCOM=y
 # CONFIG_OPLUS_SYSTEM_KERNEL_MTK is not set
 CONFIG_CC_VERSION_TEXT="Android (8490178, based on r450784d) clang version 14.0.6 (https://android.googlesource.com/toolchain/llvm-project 4c603efb0cca074e9238af8b4106c30add4418f6)"
