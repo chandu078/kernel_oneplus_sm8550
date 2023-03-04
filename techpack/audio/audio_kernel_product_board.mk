@@ -43,5 +43,5 @@ PRODUCT_PACKAGES += $(KERNEL_MODULES_OUT)/bolero_cdc_dlkm.ko \
 endif
 #ifdef OPLUS_ARCH_EXTENDS
 #add for oplus audio extends driver
--include $(TOP)/vendor/qcom/opensource/audio-kernel/oplus/oplus_audio_kernel_product_board.mk
+-include $(TOP)/kernel/oneplus/sm8550/techpack/audio/oplus_audio_kernel_product_board.mk
 #endif /* OPLUS_ARCH_EXTENDS */
