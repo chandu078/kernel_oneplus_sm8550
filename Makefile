@@ -1204,6 +1204,9 @@ PHONY += headers_install
 headers_install: headers
 	$(call cmd,headers_install)
 
+techpack-dirs := $(shell find $(srctree)/techpack -maxdepth 1 -mindepth 1 -type d -not -name ".*")
+techpack-dirs := $(subst $(srctree)/,,$(techpack-dirs))
+
 headers:
 ifeq ($(KBUILD_EXTMOD),)
 	$(if $(wildcard $(srctree)/arch/$(SRCARCH)/include/uapi/asm/Kbuild),, \
@@ -1211,7 +1214,9 @@ ifeq ($(KBUILD_EXTMOD),)
 endif
 	$(Q)$(MAKE) $(hdr-inst)=$(hdr-prefix)include/uapi
 	$(Q)$(MAKE) $(hdr-inst)=$(hdr-prefix)arch/$(SRCARCH)/include/uapi
-	$(Q)$(MAKE) $(hdr-inst)=techpack
+	$(Q)for d in $(techpack-dirs); do \
+			$(MAKE) $(hdr-inst)=$$d/include/uapi; \
+	done
 
 # ---------------------------------------------------------------------------
 # Devicetree files
