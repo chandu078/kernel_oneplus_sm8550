@@ -10,7 +10,7 @@
 #include <linux/regulator/consumer.h>
 #include <linux/slab.h>
 #include <linux/thermal.h>
-#include <linux/msm_kgsl.h>
+#include <include/linux/msm_kgsl.h>
 #include <soc/qcom/dcvs.h>
 
 #include "kgsl_device.h"

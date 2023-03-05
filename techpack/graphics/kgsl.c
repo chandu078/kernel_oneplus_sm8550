@@ -16,7 +16,7 @@
 #include <linux/mem-buf.h>
 #include <linux/mman.h>
 #include <linux/mm_types.h>
-#include <linux/msm_kgsl.h>
+#include <include/linux/msm_kgsl.h>
 #include <linux/of.h>
 #include <linux/of_fdt.h>
 #include <linux/pm_runtime.h>
@@ -39,8 +39,8 @@
 #include "kgsl_trace.h"
 
 #if IS_ENABLED(CONFIG_OPLUS_FEATURE_MM_OSVELTE)
-#include "mm_osvelte/sys-memstat.h"
-#include "mm_osvelte/common.h"
+#include "../../mm/oplus_mm/mm_osvelte/sys-memstat.h"
+#include "../../mm/oplus_mm/mm_osvelte/common.h"
 #endif /* CONFIG_OPLUS_FEATURE_MM_OSVELTE */
 
 #ifdef ENABLE_GPU_WORK_PERIOD

@@ -20,18 +20,18 @@
 #include <linux/of_platform.h>
 #include <linux/regmap.h>
 #include <linux/debugfs.h>
-#include <soc/soundwire.h>
+#include <../../../include/soc/soundwire.h>
 #include <sound/pcm.h>
 #include <sound/pcm_params.h>
 #include <sound/soc.h>
 #include <sound/soc-dapm.h>
 #include <sound/tlv.h>
-#include <asoc/msm-cdc-pinctrl.h>
-#include <asoc/msm-cdc-supply.h>
+#include <../../../include/asoc/msm-cdc-pinctrl.h>
+#include <../../../include/asoc/msm-cdc-supply.h>
 #include "wsa884x-registers.h"
 #include "wsa884x.h"
 #include "internal.h"
-#include "asoc/bolero-slave-internal.h"
+#include "../../../include/asoc/bolero-slave-internal.h"
 #include <linux/qti-regmap-debugfs.h>
 
 #define T1_TEMP -10

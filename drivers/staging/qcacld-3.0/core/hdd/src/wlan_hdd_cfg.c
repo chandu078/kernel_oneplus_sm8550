@@ -27,7 +27,7 @@
 
 #include <linux/firmware.h>
 #include <linux/string.h>
-#include <wlan_hdd_includes.h>
+#include "../inc/wlan_hdd_includes.h"
 #include <wlan_hdd_main.h>
 #include <wlan_hdd_assoc.h>
 #include <wlan_hdd_cfg.h>

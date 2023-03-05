@@ -11,7 +11,7 @@
 #include <linux/file.h>
 #include <linux/bitmap.h>
 
-#include "cam_sync.h"
+#include "../../include/uapi/camera/media/cam_sync.h"
 #include "cam_debug_util.h"
 
 #define CAM_DMA_FENCE_MAX_FENCES  128

@@ -19,7 +19,7 @@
 
 #include <linux/platform_device.h>
 #include <linux/pci.h>
-#include "cds_api.h"
+#include "../../cds/inc/cds_api.h"
 #include "qdf_status.h"
 #include "qdf_lock.h"
 #include "cds_sched.h"

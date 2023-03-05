@@ -30,7 +30,7 @@
 #include <linux/init.h>
 #include <linux/etherdevice.h>
 #include <linux/wireless.h>
-#include "osif_sync.h"
+#include "../../../os_if/sync/inc/osif_sync.h"
 #include <wlan_hdd_includes.h>
 #include <net/arp.h>
 #include <net/cfg80211.h>

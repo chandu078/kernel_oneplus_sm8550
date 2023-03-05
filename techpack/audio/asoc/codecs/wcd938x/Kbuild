@@ -31,6 +31,7 @@ endif
 		INCS    +=  -include $(AUDIO_ROOT)/config/kalamaautoconf.h
 	endif
 
+
 # As per target team, build is done as follows:
 # Defconfig : build with default flags
 # Slub      : defconfig  + CONFIG_SLUB_DEBUG := y +

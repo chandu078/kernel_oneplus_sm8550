@@ -11,7 +11,7 @@
 #include <linux/slab.h>
 #include <linux/platform_device.h>
 #include "cam_debug_util.h"
-#include "cam_cpas.h"
+#include "../../include/uapi/camera/media/cam_cpas.h"
 
 #define CAM_SOC_BUS_MAX_NUM_USECASES 8
 

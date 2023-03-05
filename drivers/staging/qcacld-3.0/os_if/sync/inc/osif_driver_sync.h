@@ -20,7 +20,7 @@
 #ifndef __OSIF_DRIVER_SYNC_H
 #define __OSIF_DRIVER_SYNC_H
 
-#include "qdf_types.h"
+#include "../../../../../../../../../qca-wifi-host-cmn/qdf/inc/qdf_types.h"
 
 /*
  * struct osif_driver_sync - opaque synchronization handle for a driver

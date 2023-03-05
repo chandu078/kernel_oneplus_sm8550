@@ -23,7 +23,7 @@
  * WLAN Host Device Driver Data Stall detection API implementation
  */
 
-#include <wlan_qct_sys.h>
+#include "../../mac/src/sys/common/inc/wlan_qct_sys.h"
 #include <scheduler_api.h>
 #include "wlan_hdd_data_stall_detection.h"
 #include "wlan_hdd_main.h"

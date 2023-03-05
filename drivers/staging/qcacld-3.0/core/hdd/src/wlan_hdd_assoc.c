@@ -24,7 +24,7 @@
  *
  */
 
-#include "wlan_hdd_includes.h"
+#include "../inc/wlan_hdd_includes.h"
 #include <ani_global.h>
 #include "dot11f.h"
 #include "wlan_hdd_power.h"
