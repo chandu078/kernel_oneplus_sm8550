@@ -1177,10 +1177,14 @@ export extmod_prefix = $(if $(KBUILD_EXTMOD),$(KBUILD_EXTMOD)/)
 export MODORDER := $(extmod_prefix)modules.order
 export MODULES_NSDEPS := $(extmod_prefix)modules.nsdeps
 
+
 # ---------------------------------------------------------------------------
 # Kernel headers
 
 PHONY += headers
+
+techpack-dirs := $(shell find $(srctree)/techpack -maxdepth 1 -mindepth 1 -type d -not -name ".*")
+techpack-dirs := $(subst $(srctree)/,,$(techpack-dirs))
 
 #Default location for installed headers
 ifeq ($(KBUILD_EXTMOD),)
@@ -1204,9 +1208,6 @@ PHONY += headers_install
 headers_install: headers
 	$(call cmd,headers_install)
 
-techpack-dirs := $(shell find $(srctree)/techpack -maxdepth 1 -mindepth 1 -type d -not -name ".*")
-techpack-dirs := $(subst $(srctree)/,,$(techpack-dirs))
-
 headers:
 ifeq ($(KBUILD_EXTMOD),)
 	$(if $(wildcard $(srctree)/arch/$(SRCARCH)/include/uapi/asm/Kbuild),, \
@@ -1215,7 +1216,7 @@ endif
 	$(Q)$(MAKE) $(hdr-inst)=$(hdr-prefix)include/uapi
 	$(Q)$(MAKE) $(hdr-inst)=$(hdr-prefix)arch/$(SRCARCH)/include/uapi
 	$(Q)for d in $(techpack-dirs); do \
-			$(MAKE) $(hdr-inst)=$$d/include/uapi; \
+		$(MAKE) $(hdr-inst)=$$d/include/uapi; \
 	done
 
 # ---------------------------------------------------------------------------
