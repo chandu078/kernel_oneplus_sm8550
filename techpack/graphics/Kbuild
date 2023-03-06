@@ -1,15 +1,6 @@
 # SPDX-License-Identifier: GPL-2.0-only
 
-KDIR := $(TOP)/kernel_platform/common
-
-ifeq ($(KGSL_PATH),)
-KGSL_PATH=$(src)
-endif
-
-# If we're not in an Android tree, select KGSL config
-ifeq ($(ANDROID_BUILD_TOP),)
-CONFIG_QCOM_KGSL = m
-endif
+KGSL_PATH = $(srctree)/techpack/graphics
 
 ifeq ($(CONFIG_ARCH_WAIPIO), y)
 	include $(KGSL_PATH)/config/gki_waipiodisp.conf
@@ -30,7 +21,7 @@ ifeq ($(CONFIG_ARCH_MONACO), y)
 	include $(KGSL_PATH)/config/gki_monaco.conf
 endif
 
-ccflags-y += -I$(KGSL_PATH) -I$(KGSL_PATH)/include/linux -I$(KGSL_PATH)/include -I$(KERNEL_SRC)/drivers/devfreq -I$(KERNEL_SRC)/drivers/iommu -I$(KERNEL_SRC)/mm/oplus_mm
+ccflags-y += -I$(KGSL_PATH) -I$(KGSL_PATH)/include/linux -I$(KGSL_PATH)/include -I$(KGSL_PATH)/drivers/devfreq -I$(KGSL_PATH)/drivers/iommu -I$(KGSL_PATH)/mm/oplus_mm
 
 obj-$(CONFIG_QCOM_KGSL) += msm_kgsl.o
 
