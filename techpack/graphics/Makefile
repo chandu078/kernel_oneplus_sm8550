@@ -1,32 +1,27 @@
-ifeq ($(KGSL_PATH),)
-KGSL_PATH=$(src)
-endif
 
-# If we're not in an Android tree, select KGSL config
-ifeq ($(ANDROID_BUILD_TOP),)
-CONFIG_QCOM_KGSL = m
-endif
 
 ifeq ($(CONFIG_ARCH_WAIPIO), y)
-	include $(KGSL_PATH)/config/gki_waipiodisp.conf
+	include $(srctree)/techpack/graphics/config/gki_waipiodisp.conf
 endif
 ifeq ($(CONFIG_ARCH_KALAMA), y)
-	include $(KGSL_PATH)/config/gki_kalama.conf
+	include $(srctree)/techpack/graphics/config/gki_kalama.conf
 endif
 ifeq ($(CONFIG_ARCH_SA8155), y)
-	include $(KGSL_PATH)/config/gki_sa8155.conf
+	include $(srctree)/techpack/graphics/config/gki_sa8155.conf
 endif
 ifeq ($(CONFIG_ARCH_KHAJE), y)
-	include $(KGSL_PATH)/config/gki_khajedisp.conf
+	include $(srctree)/techpack/graphics/config/gki_khajedisp.conf
 endif
 ifeq ($(CONFIG_ARCH_SA8195), y)
-	include $(KGSL_PATH)/config/gki_sa8155.conf
+	include $(srctree)/techpack/graphics/config/gki_sa8155.conf
 endif
 ifeq ($(CONFIG_ARCH_MONACO), y)
-	include $(KGSL_PATH)/config/gki_monaco.conf
+	include $(srctree)/techpack/graphics/config/gki_monaco.conf
 endif
 
-ccflags-y += -I$(KGSL_PATH) -I$(KGSL_PATH)/include/linux -I$(KGSL_PATH)/include -I$(KERNEL_SRC)/drivers/devfreq -I$(KERNEL_SRC)/drivers/iommu -I$(KERNEL_SRC)/mm/oplus_mm
+#ccflags-y += -I$(KGSL_PATH) -I$(KGSL_PATH)/include/linux -I$(KGSL_PATH)/include -I$(KERNEL_SRC)/drivers/devfreq -I$(KERNEL_SRC)/drivers/iommu -I$(KERNEL_SRC)/mm/oplus_mm/
+
+ccflags-y += -I$(srctree) -I$(srctree)/include/linux -I$(srctree)/include -I$(srctree)/drivers/devfreq -I$(srctree)/drivers/iommu -I$(srctree)/mm/oplus_mm
 
 obj-$(CONFIG_QCOM_KGSL) += msm_kgsl.o
 

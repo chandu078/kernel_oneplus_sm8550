@@ -83,8 +83,8 @@ EXTRA_CFLAGS += -Wheader-guard
 endif
 
 ifeq ($(KERNEL_BUILD), 1)
-	obj-y += codecs/
-endif
+	obj-y	+= codecs/
+ endif
 
 # Module information used by KBuild framework
 obj-$(CONFIG_AUDIO_EXTEND_DRV) += audio_extend_dlkm.o

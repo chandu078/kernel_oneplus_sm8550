@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: GPL-2.0-only
 /*
  * Copyright (c) 2015-2021, The Linux Foundation. All rights reserved.
+ * Copyright (c) 2022 Qualcomm Innovation Center, Inc. All rights reserved.
  */
 
 #include <linux/module.h>
@@ -27,7 +28,6 @@
 #include <sound/tlv.h>
 #include <asoc/msm-cdc-pinctrl.h>
 #include <asoc/msm-cdc-supply.h>
-#include "wsa883x-registers.h"
 #include "wsa883x.h"
 #include "internal.h"
 #include "asoc/bolero-slave-internal.h"
@@ -1764,7 +1764,8 @@ static int wsa883x_swr_probe(struct swr_device *pdev)
 			__func__, ret);
 		goto dev_err;
 	}
-    wsa883x->swr_slave->slave_irq = wsa883x->virq;
+
+	wsa883x->swr_slave->slave_irq = wsa883x->virq;
 
 	wcd_request_irq(&wsa883x->irq_info, WSA883X_IRQ_INT_SAF2WAR,
 			"WSA SAF2WAR", wsa883x_saf2war_handle_irq, wsa883x);

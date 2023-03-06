@@ -51,7 +51,10 @@ USERINCLUDE += \
 # Include Kernel headers
 LINUXINCLUDE += \
 	-I$(srctree)/techpack/camera/include/uapi/camera \
-	-I$(srctree)/techpack/camera/include
+	-I$(srctree)/techpack/camera/include/uapi/camera/media \
+	-I$(srctree)/techpack/camera/include \
+        -I$(srctree)/
+
 # Optional include directories
 ccflags-$(CONFIG_MSM_GLOBAL_SYNX) += -I$(srctree)/drivers/media/platform/msm/synx
 
