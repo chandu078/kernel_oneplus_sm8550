@@ -32,7 +32,7 @@
 #include <linux/wireless.h>
 #include <linux/semaphore.h>
 #include <linux/compat.h>
-#include <cdp_txrx_cmn.h>
+#include "../../../../qca-wifi-host-cmn/dp/inc/cdp_txrx_cmn.h"
 #include <cds_api.h>
 #include <cds_sched.h>
 #include <linux/etherdevice.h>

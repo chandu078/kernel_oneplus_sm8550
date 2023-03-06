@@ -33,7 +33,7 @@
 /*---------------------------------------------------------------------------
    Include files
    -------------------------------------------------------------------------*/
-#include <../../../../../../../../../../../qca-wifi-host-cmn/qdf/inc/qdf_types.h>
+#include <../../../../../../../qca-wifi-host-cmn/qdf/inc/qdf_types.h>
 #include <qdf_status.h>
 #include <scheduler_api.h>
 

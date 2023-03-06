@@ -27,7 +27,7 @@
  *
  */
 
-#include <qdf_types.h>
+#include <../../../../qca-wifi-host-cmn/qdf/inc/qdf_types.h>
 #include <qdf_status.h>
 #include <qdf_mem.h>
 #include <qdf_debugfs.h>

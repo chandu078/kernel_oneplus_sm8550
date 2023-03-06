@@ -7,7 +7,7 @@
 #include <linux/devfreq.h>
 #include <linux/slab.h>
 
-#include "governor.h"
+#include "../../drivers/devfreq/governor.h"
 #include "msm_adreno_devfreq.h"
 
 #define MIN_BUSY                1000

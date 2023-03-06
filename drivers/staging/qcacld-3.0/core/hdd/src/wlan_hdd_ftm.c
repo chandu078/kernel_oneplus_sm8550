@@ -23,7 +23,7 @@
  * This file contains the WLAN factory test mode implementation
  */
 
-#include "cds_sched.h"
+#include "../../cds/inc/cds_sched.h"
 #include <cds_api.h>
 #include "sir_types.h"
 #include "qdf_types.h"

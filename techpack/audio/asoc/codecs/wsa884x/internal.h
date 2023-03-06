@@ -7,7 +7,7 @@
 #ifndef WSA884X_INTERNAL_H
 #define WSA884X_INTERNAL_H
 
-#include <asoc/wcd-irq.h>
+#include <../../../include/asoc/wcd-irq.h>
 #include "wsa884x.h"
 #include "wsa884x-registers.h"
 

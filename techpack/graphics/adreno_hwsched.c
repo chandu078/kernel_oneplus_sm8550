@@ -13,7 +13,7 @@
 #include "adreno_sysfs.h"
 #include "adreno_trace.h"
 #include "kgsl_timeline.h"
-#include <linux/msm_kgsl.h>
+#include <include/linux/msm_kgsl.h>
 
 /* This structure represents inflight command object */
 struct cmd_list_obj {

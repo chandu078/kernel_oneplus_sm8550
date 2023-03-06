@@ -37,7 +37,7 @@
 #include <linux/init.h>
 #include <linux/wireless.h>
 #include <linux/if_arp.h>
-#include <../../../../cds/inc/cds_api.h>
+#include "../../cds/inc/cds_api.h"
 #include <sme_api.h>
 #include "wlan_hdd_assoc.h"
 #include "wlan_hdd_wext.h"

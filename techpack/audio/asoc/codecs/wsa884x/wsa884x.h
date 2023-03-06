@@ -3,8 +3,8 @@
  * Copyright (c) 2022 Qualcomm Innovation Center, Inc. All rights reserved.
  */
 
-#ifndef _WSA884X_H
-#define _WSA884X_H
+//#ifndef _WSA884X_H
+//#define _WSA884X_H
 
 #include <linux/regmap.h>
 #include <sound/soc.h>

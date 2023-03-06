@@ -24,8 +24,7 @@
 
 struct msm_vidc_core *g_core;
 
-//const char video_banner[] = "Video-Banner: (" VIDEO_COMPILE_BY "@"
-//	VIDEO_COMPILE_HOST ") (" VIDEO_COMPILE_TIME ")";
+const char video_banner[] = "Video-Banner: ( VIDEO_COMPILE_BY @ VIDEO_COMPILE_HOST ) ( VIDEO_COMPILE_TIME )";
 
 static int msm_vidc_deinit_irq(struct msm_vidc_core *core)
 {

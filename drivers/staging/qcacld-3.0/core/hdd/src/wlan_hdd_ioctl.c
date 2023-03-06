@@ -19,7 +19,7 @@
 
 /* Include Files */
 
-#include "osif_sync.h"
+#include "../../../../os_if/sync/inc/osif_sync.h"
 #include <wlan_hdd_includes.h>
 #include <wlan_hdd_wowl.h>
 #include <wlan_hdd_stats.h>
