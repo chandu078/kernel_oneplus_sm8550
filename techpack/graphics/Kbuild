@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: GPL-2.0-only
 
-KGSL_PATH = $(srctree)/techpack/graphics
+KGSL_PATH := $(srctree)/techpack/graphics
 
 ifeq ($(CONFIG_ARCH_WAIPIO), y)
 	include $(KGSL_PATH)/config/gki_waipiodisp.conf
