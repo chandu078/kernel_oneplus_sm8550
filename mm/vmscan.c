@@ -1805,10 +1805,8 @@ free_it:
 		trace_android_vh_page_trylock_clear(page);
 		if (unlikely(PageTransHuge(page)))
 			destroy_compound_page(page);
-		else {
-			trace_android_vh_page_trylock_clear(page);
+		else
 			list_add(&page->lru, &free_pages);
-		}
 		continue;
 
 activate_locked_split:

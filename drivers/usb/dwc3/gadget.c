@@ -2506,8 +2506,13 @@ static int dwc3_gadget_soft_disconnect(struct dwc3 *dwc)
 {
 	unsigned long flags;
 
+<<<<<<< HEAD
 	spin_lock_irqsave(&dwc->lock, flags);
 	dwc->connected = false;
+=======
+	is_on = !!is_on;
+	dwc->softconnect = is_on;
+>>>>>>> eca2af649aaa3d00a43cc27bb567e36a7c28368a
 
 	/*
 	 * Per databook, when we want to stop the gadget, if a control transfer
@@ -2580,6 +2585,7 @@ static int dwc3_gadget_pullup(struct usb_gadget *g, int is_on)
 		return 0;
 	}
 
+	/* Ensure that RPM resume has not already triggered run/stop set */
 	if (dwc->pullups_connected == is_on) {
 		pm_runtime_put(dwc->dev);
 		return 0;

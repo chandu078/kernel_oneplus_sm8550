@@ -520,6 +520,9 @@
   __mod_zone_page_state
   d_delete
   mem_cgroup_update_lru_size
+<<<<<<< HEAD
 
   __traceiter_android_rvh_ctl_dirty_rate
   __tracepoint_android_rvh_ctl_dirty_rate
+=======
+>>>>>>> eca2af649aaa3d00a43cc27bb567e36a7c28368a
